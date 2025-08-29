@@ -1,0 +1,88 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+  }
+  
+  .panel {
+    position: relative;
+    max-width: min(90vw, 72rem);
+    max-height: 90vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .figure {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: #111;
+  }
+  
+  .img {
+    max-width: 100%;
+    max-height: 75vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .caption {
+    color: #fff;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: .9;
+  }
+  
+  .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  .title {
+    font-weight: 800;
+    font-size: 1.125rem;
+  }
+  
+  .controls {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+  }
+  
+  .iconBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+    color: #111;
+    background: #fff;
+  }
+  .iconBtn:disabled { opacity: .4; cursor: default; }
+  .iconBtn:hover:not(:disabled) { filter: brightness(.95); }
+  
+  .counter {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  @media (max-width: 48rem) {
+    .panel { padding: 0.75rem; }
+  }
+  

@@ -1,0 +1,112 @@
+.portfolioContainer {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .header {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--muted-foreground, #555);
+  }
+  
+  /* --- gallery --- */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .galleryItem {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: zoom-in; /* indicates click-to-view */
+    background: #f7f7f7;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .galleryItem:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .galleryImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+  
+  .galleryItem:hover .galleryImage {
+    transform: scale(1.03);
+  }
+  
+  /* optional caption if you want overlay text */
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .galleryItem:hover .caption {
+    opacity: 1;
+  }
+  
+  /* --- CTA section --- */
+  .cta {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #ffeaf9, #f8b4cb);
+    border-radius: 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #000;
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+  
+  .ctaButton:hover {
+    background: #333;
+  }
+  
+  /* --- responsive tweaks --- */
+  @media (max-width: 48rem) {
+    .title { font-size: 1.5rem; }
+    .ctaTitle { font-size: 1.25rem; }
+  }
+  

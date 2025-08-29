@@ -1,0 +1,16 @@
+.grid{
+ display:grid;
+ gap:1.5rem; 
+ grid-template-columns:1fr; 
+
+}
+@media (min-width:40rem){
+     .grid
+     {
+        grid-template-columns:repeat(2,1fr); 
+        margin: 0 2rem;
+    } 
+}   /* ~640px */
+@media (min-width:56.25rem){ .grid{ grid-template-columns:repeat(3,1fr); margin: 0 2rem; } } /* ~900px */
+@media (min-width:75rem){ .grid{ grid-template-columns:repeat(4,1fr); margin: 0 2rem;} }    /* 1200px */
+@media (max-width:39.99rem){ .grid{ margin: 0 1rem; } } /* ~640px */

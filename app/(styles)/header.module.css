@@ -137,8 +137,8 @@
   display:block;
   padding:0.625rem 0;
   font-size:0.875rem; 
-  font-weight:600;
-  color:rgba(0,0,0,.55);
+  font-weight:700;
+  color:black;
   transition: color .2s ease, transform .2s ease;
 }
 .mobileNavLink:hover{
